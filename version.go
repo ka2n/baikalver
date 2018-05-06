@@ -1,7 +1,6 @@
 package baikalver
 
 import (
-	"fmt"
 	"strconv"
 )
 
@@ -12,5 +11,5 @@ func VersionFromFWV(s string) (string, error) {
 		return "", err
 	}
 	fwvn := uint8(fwv)
-	return fmt.Sprintf("%d.%d", fwvn>>4&255, fwv&15), nil
+	return strconv.Itoa(int(fwvn>>4&255)) + "." + strconv.Itoa(int(fwvn&15)), nil
 }
