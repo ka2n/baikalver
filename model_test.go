@@ -14,7 +14,8 @@ func TestModelFromHWV(t *testing.T) {
 		want    Model
 		wantErr bool
 	}{
-		{"GX1", args{"29297"}, GX10, false},
+		{"GX10", args{"29297"}, GX10, false},
+		{"G28", args{"29302"}, G28, false},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {

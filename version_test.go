@@ -13,6 +13,7 @@ func TestVersionFromFWV(t *testing.T) {
 		wantErr bool
 	}{
 		{"ok", args{"7500055"}, "1.7", false},
+		{"ok", args{"7501345"}, "2.1", false},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
